@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 4eb1eb2fc1cf88740bd7f788704c1dfc
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bip01
+    100004: Bip01 Head
+    100006: Bip01 Neck
+    100008: Bip01 Pelvis
+    100010: Bip01 Spine
+    100012: Bip01 Spine1
+    100014: Bip01 Spine2
+    100016: Brow_L
+    100018: Brow_R
+    100020: Cheekbone
+    100022: Eye_L
+    100024: Eye_R
+    100026: Eye_Socket_L
+    100028: Eye_Socket_L_01
+    100030: Eye_Socket_L_02
+    100032: Eye_Socket_L_03
+    100034: Eye_Socket_L_04
+    100036: Eye_Socket_R
+    100038: Eye_Socket_R_01
+    100040: Eye_Socket_R_02
+    100042: Eye_Socket_R_03
+    100044: Eye_Socket_R_04
+    100046: Face
+    100048: face
+    100050: Jaw
+    100052: Lip_01
+    100054: Lip_02
+    100056: Lip_03
+    100058: Lip_04
+    100060: Mandible_2
+    100062: Mouth
+    100064: Nose
+    100066: Nose_01
+    400000: //RootNode
+    400002: Bip01
+    400004: Bip01 Head
+    400006: Bip01 Neck
+    400008: Bip01 Pelvis
+    400010: Bip01 Spine
+    400012: Bip01 Spine1
+    400014: Bip01 Spine2
+    400016: Brow_L
+    400018: Brow_R
+    400020: Cheekbone
+    400022: Eye_L
+    400024: Eye_R
+    400026: Eye_Socket_L
+    400028: Eye_Socket_L_01
+    400030: Eye_Socket_L_02
+    400032: Eye_Socket_L_03
+    400034: Eye_Socket_L_04
+    400036: Eye_Socket_R
+    400038: Eye_Socket_R_01
+    400040: Eye_Socket_R_02
+    400042: Eye_Socket_R_03
+    400044: Eye_Socket_R_04
+    400046: Face
+    400048: face
+    400050: Jaw
+    400052: Lip_01
+    400054: Lip_02
+    400056: Lip_03
+    400058: Lip_04
+    400060: Mandible_2
+    400062: Mouth
+    400064: Nose
+    400066: Nose_01
+    2100000: 'Material #25'
+    4300000: face
+    9500000: //RootNode
+    13700000: face
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
