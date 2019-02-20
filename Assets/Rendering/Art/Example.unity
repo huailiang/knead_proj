@@ -705,28 +705,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progress:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.3
+  - -0.02
+  - -0.25
+  - 0.27
+  - -0.77
   - 0
   - 0
   defaultPosition: {x: -0.105, y: 0.1749, z: 0}
   defaultRotation: {x: -0.5255277, y: 0.4731917, z: 0.52461123, w: 0.47401834}
   defaultScale: {x: 1.16, y: 1, z: 1.332}
-  curPosition: {x: 0, y: 0, z: 0.011679}
-  curRotation: {x: -0.6776768, y: 0.20367073, z: 0.67649496, w: 0.20402679}
-  curScale: {x: 1, y: 1, z: 1}
+  curPosition: {x: -0.102, y: 0.17426625, z: -0.007025}
+  curRotation: {x: -0.5848596, y: 0.3978172, z: 0.5838396, w: 0.39851224}
+  curScale: {x: 0.9598, y: 1, z: 1}
   mPosition:
-  - {x: 0, y: 0, z: -0.0281}
-  - {x: 0, y: 0, z: 0.0255}
+  - {x: -0.115, y: 0.1432124, z: -0.0281}
+  - {x: -0.095, y: 0.1632124, z: 0.0255}
   mRotation:
   - {x: -0.2962955, y: 0.6415935, z: 0.2957785, w: 0.6427145}
   - {x: -0.69013625, y: 0.15652157, z: 0.68893266, w: 0.15679531}
   mScale:
-  - {x: 1, y: 1, z: 1}
-  - {x: 1, y: 1, z: 1}
+  - {x: 0.9, y: 0.9, z: 0.9}
+  - {x: 1.1, y: 1.1, z: 1.1}
 --- !u!4 &754359047
 Transform:
   m_ObjectHideFlags: 0
@@ -734,9 +734,9 @@ Transform:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 754359045}
-  m_LocalRotation: {x: -0.5255277, y: 0.4731917, z: 0.52461123, w: 0.47401834}
-  m_LocalPosition: {x: -0.105, y: 0.1749, z: 0}
-  m_LocalScale: {x: 1.16, y: 1, z: 1.332}
+  m_LocalRotation: {x: -0.5848596, y: 0.3978172, z: 0.5838396, w: 0.39851224}
+  m_LocalPosition: {x: -0.102, y: 0.17426625, z: -0.007025}
+  m_LocalScale: {x: 0.9598, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1382242852}
   m_RootOrder: 23
