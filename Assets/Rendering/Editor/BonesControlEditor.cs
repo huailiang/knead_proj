@@ -7,12 +7,15 @@ using UnityEngine;
 
 public class BonesControlEditor : Editor
 {
+    private bool[] foldout = new bool[(int)KneadType.MAX];
+
     void DrawBoneControlRot(BonesControl target, KneadType type)
     {
         EditorGUILayout.Space();
         using (var scope1 = new EditorGUI.ChangeCheckScope())
         {
-            if (GUILayout.Toggle(target.isUnlockTransformElement(type), BonesControl.GetLabel(type)))
+            foldout[(int)type] = EditorGUILayout.Foldout(foldout[(int)type], BonesControl.GetLabel(type));
+            if (foldout[(int)type])
             {
                 target.UnlockTransformElement(type);
                 float angle;
@@ -32,7 +35,7 @@ public class BonesControlEditor : Editor
                     if (GUILayout.Button("SaveMin"))
                     {
                         target.SaveBonesValue(BonesControl.StoreType.StoreMinValue, type);
-                        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+                        MakeSceneDirty();
                     }
                     using (var ccs = new EditorGUI.ChangeCheckScope())
                     {
@@ -42,18 +45,14 @@ public class BonesControlEditor : Editor
                     if (GUILayout.Button("SaveMax"))
                     {
                         target.SaveBonesValue(BonesControl.StoreType.StoreMaxValue, type);
-                        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+                        MakeSceneDirty();
                     }
                 }
             }
-            else
-            {
-                target.LockTransformElement(type);
-            }
-
+            GUILayout.Space(2);
             if (scope1.changed)
             {
-                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+                MakeSceneDirty();
             }
         }
 
@@ -64,7 +63,8 @@ public class BonesControlEditor : Editor
         EditorGUILayout.Space();
         using (var scope1 = new EditorGUI.ChangeCheckScope())
         {
-            if (GUILayout.Toggle(target.isUnlockTransformElement(type), BonesControl.GetLabel(type)))
+            foldout[(int)type] = EditorGUILayout.Foldout(foldout[(int)type], BonesControl.GetLabel(type));
+            if (foldout[(int)type])
             {
                 target.UnlockTransformElement(type);
 
@@ -74,7 +74,7 @@ public class BonesControlEditor : Editor
                     if (GUILayout.Button(minValue))
                     {
                         target.SaveBonesValue(BonesControl.StoreType.StoreMinValue, type);
-                        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+                        MakeSceneDirty();
                     }
                     using (var ccs = new EditorGUI.ChangeCheckScope())
                     {
@@ -85,19 +85,25 @@ public class BonesControlEditor : Editor
                     if (GUILayout.Button(minValue))
                     {
                         target.SaveBonesValue(BonesControl.StoreType.StoreMaxValue, type);
-                        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+                        MakeSceneDirty();
                     }
                 }
             }
-            else
-            {
-                target.LockTransformElement(type);
-            }
+            GUILayout.Space(2);
             if (scope1.changed)
             {
-                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+                MakeSceneDirty();
             }
         }
+    }
+
+
+    private void MakeSceneDirty()
+    {
+#if UNITY_EDITOR
+        if (!Application.isPlaying)
+            EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+#endif
     }
 
     public override void OnInspectorGUI()
@@ -110,17 +116,17 @@ public class BonesControlEditor : Editor
         if (GUILayout.Button("Init"))
         {
             target.InitDefautData(true);
-            EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+            MakeSceneDirty();
         }
         if (GUILayout.Button("Reset"))
         {
             target.ResetData();
-            EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+            MakeSceneDirty();
         }
         GUILayout.EndHorizontal();
 
         EditorGUILayout.Space();
-        for (int i = 0; i < (int)KneadType.MaxCount; i++)
+        for (int i = 0; i < (int)KneadType.MAX; i++)
         {
             if (i != (int)KneadType.Rotation)
             {

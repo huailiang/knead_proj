@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18196371, g: 0.22765185, b: 0.30741295, a: 1}
+  m_IndirectSpecularColor: {r: 0.18196343, g: 0.22765128, b: 0.30741197, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -781,7 +781,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1056555668}
   - component: {fileID: 1056555667}
-  - component: {fileID: 1056555666}
   - component: {fileID: 1056555665}
   m_Layer: 0
   m_Name: Fbx
@@ -835,23 +834,6 @@ MonoBehaviour:
   mainRt: {fileID: 0}
   mat: {fileID: 0}
   outputMat: {fileID: 2100000, guid: c6a0a23d9997ef74fb1cf9d85bca6e65, type: 2}
---- !u!114 &1056555666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1056555664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57780abfb38bc347be1e788ee71fad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Group:
-  - Label: 
-    Bones:
-    - control: {fileID: 754359046}
-      type: 2
-  SaveName: Fbx
 --- !u!95 &1056555667
 Animator:
   serializedVersion: 3

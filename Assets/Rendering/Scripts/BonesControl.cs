@@ -2,6 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum KneadType
+{
+    PosX,
+    PosY,
+    PosZ,
+    Rotation,
+    ScaleX,
+    ScaleY,
+    ScaleZ,
+    MAX
+}
+
 [ExecuteInEditMode]
 public class BonesControl : MonoBehaviour
 {
@@ -13,9 +25,7 @@ public class BonesControl : MonoBehaviour
     }
 
     public Quaternion[] MRotation { get { return mRotation; } }
-
-    public float[] progress = new float[(int)KneadType.MaxCount];
-
+    public float[] progress = new float[(int)KneadType.MAX];
     bool isInitData = false;
     int unlockBoneState = 0;
     [SerializeField]
@@ -54,7 +64,7 @@ public class BonesControl : MonoBehaviour
             curPosition = defaultPosition;
             curScale = defaultScale;
             curRotation = defaultRotation;
-            for (var i = 0; i < (int)KneadType.MaxCount; i++)
+            for (var i = 0; i < (int)KneadType.MAX; i++)
             {
                 progress[i] = 0.0f;
             }
@@ -66,7 +76,7 @@ public class BonesControl : MonoBehaviour
         transform.localPosition = defaultPosition;
         transform.localScale = defaultScale;
         transform.localRotation = defaultRotation;
-        for (var i = 0; i < (int)KneadType.MaxCount; i++)
+        for (var i = 0; i < (int)KneadType.MAX; i++)
         {
             progress[i] = 0.0f;
         }
@@ -89,51 +99,9 @@ public class BonesControl : MonoBehaviour
         }
     }
 
-    static public KneadType GetEnum(string type)
-    {
-        return (KneadType)Enum.Parse(typeof(KneadType), type);
-    }
-
-    public int GetIndex(KneadType type)
-    {
-        int j = 0;
-        for (var i = 0; i < (int)KneadType.MaxCount; i++)
-        {
-            if (isUnlockTransformElement((KneadType)i))
-            {
-                if (type == (KneadType)i) break;
-                j++;
-            }
-        }
-        return j;
-    }
-
-    public List<string> GetLabels()
-    {
-        var labels = new List<string>();
-        for (var i = 0; i < (int)KneadType.MaxCount; i++)
-        {
-            if (isUnlockTransformElement((KneadType)i))
-            {
-                labels.Add(GetLabel((KneadType)i));
-            }
-        }
-        return labels;
-    }
-
     public void UnlockTransformElement(KneadType type)
     {
         unlockBoneState |= (1 << (int)type);
-    }
-
-    public void LockTransformElement(KneadType type)
-    {
-        unlockBoneState &= ~(1 << (int)type);
-    }
-
-    public bool isUnlockTransformElement(KneadType type)
-    {
-        return (unlockBoneState & (1 << (int)type)) != 0;
     }
 
     public void SaveBonesValue(StoreType id, KneadType type)
@@ -188,7 +156,6 @@ public class BonesControl : MonoBehaviour
     public void UpdateProgress(KneadType type, float d)
     {
         int id = d < 0 ? 0 : 1;
-
         switch (type)
         {
             case KneadType.PosX:
