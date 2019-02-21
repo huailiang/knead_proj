@@ -16,6 +16,9 @@
 
 ## 编辑器工具
 
+
+<br><img src='image/control.jpg'><img src='image/texture.jpg'><br>
+
 Hierarchy窗口中选中Nose这根骨骼，随便调整Transform一个属性，比如说Position-X 拖拽到骨骼调动的最小值，然后在Inspector的BonesControl对应的面板点击
 对应的左边按钮，然后拖拽Position-X到调动的最大值，点击对应属性右边的按钮。点击按钮点击之后，会把记录的值序列化到磁盘当中。
 拖拽进度条，就可以预览效果。
@@ -32,6 +35,8 @@ Hierarchy窗口中选中Fbx，即脸部的根节点。设置好每个部位对�
 而捏脸控制的就是后者，这些骨骼不能再由Animation来改动。这里我们调整的骨骼参数是位置、旋转、缩放，其中旋转需要指定旋转的轴向。
 
 
+<br><img src='image/bone.gif'><br>
+
 
 ### 妆容
 
@@ -40,7 +45,7 @@ Hierarchy窗口中选中Fbx，即脸部的根节点。设置好每个部位对�
 再赋给之前的材质。
 
 
-
+<br><img src='image/paint.gif'><br>
 
 
 ## 写在最后
