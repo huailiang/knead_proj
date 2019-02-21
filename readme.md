@@ -17,16 +17,17 @@
 ## 编辑器工具
 
 
-<br><img src='image/control.jpg'><img src='image/texture.jpg'><br>
 
 Hierarchy窗口中选中Nose这根骨骼，随便调整Transform一个属性，比如说Position-X 拖拽到骨骼调动的最小值，然后在Inspector的BonesControl对应的面板点击
 对应的左边按钮，然后拖拽Position-X到调动的最大值，点击对应属性右边的按钮。点击按钮点击之后，会把记录的值序列化到磁盘当中。
 拖拽进度条，就可以预览效果。
 
+<br><img src='image/control.jpg'><br>
 
 Hierarchy窗口中选中Fbx，即脸部的根节点。设置好每个部位对应的贴图和贴图在MainTexture中的偏移。运行Unity,调整Inspector中TextureToRT脚本里的参数（饱和度、
 色相、浓淡），即可预览到对应的部位变化。
 
+<br><img src='image/texture.jpg'><br>
 
 ### 骨骼
 
