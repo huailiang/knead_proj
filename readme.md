@@ -58,5 +58,7 @@ Hierarchy窗口中选中Fbx，即脸部的根节点。设置好每个部位对�
 
 
 ## 联系方式
+
 email: peng_huailiang@qq.com
+
 blog:  https://huailiang.github.io/
