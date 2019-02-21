@@ -22,6 +22,8 @@ Hierarchy窗口中选中Nose这根骨骼，随便调整Transform一个属性，�
 对应的左边按钮，然后拖拽Position-X到调动的最大值，点击对应属性右边的按钮。点击按钮点击之后，会把记录的值序列化到磁盘当中。
 拖拽进度条，就可以预览效果。
 
+Init按钮是保存fbx骨骼参数的初始值，Reset按钮是丢弃捏脸数据，恢复到初始值。
+
 <br><img src='image/control.jpg'><br>
 
 Hierarchy窗口中选中Fbx，即脸部的根节点。设置好每个部位对应的贴图和贴图在MainTexture中的偏移。运行Unity,调整Inspector中TextureToRT脚本里的参数（饱和度、
@@ -49,7 +51,12 @@ Hierarchy窗口中选中Fbx，即脸部的根节点。设置好每个部位对�
 <br><img src='image/paint.gif'><br>
 
 
-## 写在最后
+## 说明
 
 本项目旨在展示捏脸的实现原理，在实际的项目开发过程中，其复杂度远远不止于此。 我们需要将预处理好编辑过的骨骼，导出编辑过的数据到二进制文件，
 也不会直接在gameobject上挂载脚本。关于如何组织，就看读者的code 能力了。在比如说你需要写一个工具，能自动裁剪妆容所在的区域，并导出偏移数据。
+
+
+## 联系方式
+email: peng_huailiang@qq.com
+blog:  https://huailiang.github.io/
