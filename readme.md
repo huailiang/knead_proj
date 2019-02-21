@@ -47,8 +47,14 @@ Hierarchy窗口中选中Fbx，即脸部的根节点。设置好每个部位对�
 就是色相、饱和度、浓淡三个参数。 调整好参数之后使用FaceMakeupShader，后处理生成一张RenderTexture, 然后把这张RT（RenderTexture）
 再赋给之前的材质。
 
-
 <br><img src='image/paint.gif'><br>
+
+
+FaceMakeupShader中对贴图的计算是基于线性空间的，所以妆容贴图的设置需要：
+
+
+<br><img src='image/sample.png'><br>
+
 
 
 ## 说明
