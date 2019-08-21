@@ -68,6 +68,11 @@ FaceMakeupShader中对贴图的计算是基于线性空间的，所以妆容贴�
 不到。所以做这块性价比还是比较低的，在资源的分配上一定要做好合理的规划，以不至于这块成为游戏性能的瓶颈。
 
 
+## 最后贴出下在游戏中运行的效果
+
+
+<br><img src='image/1.jpg'><br>
+
 ## 联系方式
 
 Email: peng_huailiang@qq.com
